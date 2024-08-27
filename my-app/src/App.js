@@ -1,6 +1,6 @@
 import './App.css';
-import Button from './Button.js';
-import ComplexButton from './ComplexButton.js';
+import Button from './components/Button.js';
+import ComplexButton from './components/ComplexButton.js';
 
 function App() {
   return (
