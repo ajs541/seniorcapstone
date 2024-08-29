@@ -1,0 +1,13 @@
+BEGIN TRANSACTION;
+CREATE TABLE "HABITATS" ("id" integer,"name" text NOT NULL, "description" TEXT NOT NULL, PRIMARY KEY (id));
+INSERT INTO "HABITATS" VALUES(1,'Grasslands','its grass');
+INSERT INTO "HABITATS" VALUES(2,'Rainforest','rainy');
+INSERT INTO "HABITATS" VALUES(3,'Desert','hot');
+CREATE TABLE "animals" ("id" integer,"name" text NOT NULL,"height" text NOT NULL,"habitat_id" integer NOT NULL,"lifespan" text NOT NULL, "description" TEXT NOT NULL, PRIMARY KEY (id), FOREIGN KEY("habitat_id") REFERENCES "HABITATS"("id"));
+INSERT INTO "animals" VALUES(1,'Lion','4.5',1,'14 years','The lion is a species in the family Felidae; it is a muscular, deep-chested cat with a short, rounded head, a reduced neck and round ears, and a hairy tuft at the end of its tail.');
+INSERT INTO "animals" VALUES(2,'Zebra','1.5',1,'25 years','Zebras are several species of African equids (horse family) united by their distinctive black-and-white striped coats.');
+INSERT INTO "animals" VALUES(3,'Gorilla','1.7',2,'35 years','Gorillas are ground-dwelling, predominantly herbivorous apes that inhabit the forests of central Sub-Saharan Africa.');
+INSERT INTO "animals" VALUES(4,'Python','2.3',2,'35 years','Python is a genus of constricting snakes in the Pythonidae family native to the tropics and subtropics of the Eastern Hemisphere.');
+INSERT INTO "animals" VALUES(5,'Elephant','3.5',3,'60 years','Elephants are mammals of the family Elephantidae and the largest existing land animals.');
+INSERT INTO "animals" VALUES(6,'Camel','2.0',3,'40 years','A camel is an even-toed ungulate in the genus Camelus that bears distinctive fatty deposits known as humps on its back.');
+COMMIT;
