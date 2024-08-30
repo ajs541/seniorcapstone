@@ -4,7 +4,9 @@ import flask
 import sqlite3
 import json
 
+from flask_cors import CORS # CORS testing
 app = flask.Flask(__name__)
+CORS(app) # further CORS testing
 
 DATABASE = 'zoo.sqlite'
 

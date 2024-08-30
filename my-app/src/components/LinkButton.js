@@ -5,13 +5,13 @@ import { StaticRouter } from 'react-router-dom/server';
 import Button from '@mui/material/Button';
 
 const LinkBehavior = React.forwardRef((props, ref) => (
-  <RouterLink ref={ref} to="./components/K_2.js" {...props} role={undefined} />
+  <RouterLink ref={ref} to="K_2.js" {...props} role={undefined} />
 ));
 
 function Router(props) {
   const { children } = props;
   if (typeof window === 'undefined') {
-    return <StaticRouter location="./components/K_2.js">{children}</StaticRouter>;
+    return <StaticRouter location="K_2.js">{children}</StaticRouter>;
   }
 
   return <MemoryRouter>{children}</MemoryRouter>;
@@ -25,7 +25,7 @@ export default function ButtonRouter() {
   return (
     <div>
       <Router>
-        <Button component={RouterLink} to="./components/K_2.js">
+        <Button component={RouterLink} to="K_2.js">
           With prop forwarding
         </Button>
         <br />
