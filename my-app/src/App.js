@@ -7,7 +7,6 @@ import RealButtonTest from './components/RealButtonTest.js';
 import K_2 from './K_2.js';
 import HabitatsComponent from './components/HabitatComponent.js';
 import BackgroundElement from './components/Background.js';
-import TitleBox from './components/Title.js';
 
 let habitatsData;
 
