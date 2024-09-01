@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
-function BackgroundElement({ children }) {
+function BackgroundElement({ title, subtitle, link, children }) {
   return (
     <Box
       sx={{
@@ -19,7 +19,7 @@ function BackgroundElement({ children }) {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundImage: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Indore_zoo_gate.jpg/1280px-Indore_zoo_gate.jpg)',
+          backgroundImage: `url(${link})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -27,6 +27,28 @@ function BackgroundElement({ children }) {
           zIndex: 1, // Behind the content
         }}
       />
+
+      {/* Title Card */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '20px', // Adjust to position the title card at the top
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 2, // In front of the background
+          padding: '10px 20px',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)', // Semi-transparent background for readability
+          borderRadius: '12px',
+          textAlign: 'center',
+        }}
+      >
+        <Typography variant="h2" sx={{ color: '#fff'}}>
+          {title}
+        </Typography>
+        <Typography variant="h5" sx={{ color: '#fff', marginTop: '10px'}}>
+          {subtitle}
+        </Typography>
+      </Box>
 
       {/* Content Overlay */}
       <Box

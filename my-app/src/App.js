@@ -7,6 +7,7 @@ import RealButtonTest from './components/RealButtonTest.js';
 import K_2 from './K_2.js';
 import HabitatsComponent from './components/HabitatComponent.js';
 import BackgroundElement from './components/Background.js';
+import TitleBox from './components/Title.js';
 
 let habitatsData;
 
@@ -22,7 +23,10 @@ fetch('http://127.0.0.1:5000/habitats')
 function App() {
   return (
     <div className="App">
-      <BackgroundElement>
+      <BackgroundElement 
+      title="Welcome to WebSafari!"
+      subtitle="What grade are you in?"
+      link="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Indore_zoo_gate.jpg/1280px-Indore_zoo_gate.jpg">
         <GradeButton />
       </BackgroundElement>
       {/*
