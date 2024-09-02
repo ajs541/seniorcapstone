@@ -31,21 +31,31 @@ function BackgroundElement({ title, subtitle, link, children }) {
       {/* Title Card */}
       <Box
         sx={{
-          position: 'absolute',
-          top: '20px', // Adjust to position the title card at the top
+          position: 'absolute', // Edited top to better respect mobile
+          top: { xs: '10px', sm: '20px'}, // Adjust to position the title card at the top
           left: '50%',
           transform: 'translateX(-50%)',
           zIndex: 2, // In front of the background
-          padding: '10px 20px',
+          padding: { xs: '10px 20px', sm: '20px 40px' }, // Adjust padding for mobile
           backgroundColor: 'rgba(0, 0, 0, 0.3)', // Semi-transparent background for readability
           borderRadius: '12px',
           textAlign: 'center',
+          width: { xs: '90%', sm: 'auto'}, //Full width on mobile
         }}
       >
-        <Typography variant="h2" sx={{ color: '#fff'}}>
+        <Typography variant="h3" 
+        sx={{ 
+          color: '#fff',
+          fontSize: { xs: '1.8rem', sm: '2.5rem' }
+          }}>
           {title}
         </Typography>
-        <Typography variant="h5" sx={{ color: '#fff', marginTop: '10px'}}>
+        <Typography variant="h6" 
+        sx={{ 
+          color: '#fff', 
+          marginTop: '10px',
+          fontSize: { xs: '1.2rem', sm: '1.5rem'},
+          }}>
           {subtitle}
         </Typography>
       </Box>
