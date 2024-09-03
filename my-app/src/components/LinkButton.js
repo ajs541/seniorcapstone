@@ -1,17 +1,19 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Link as RouterLink, MemoryRouter } from 'react-router-dom';
 import { StaticRouter } from 'react-router-dom/server';
-import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
 
 const LinkBehavior = React.forwardRef((props, ref) => (
-  <RouterLink ref={ref} to="K_2.js" {...props} role={undefined} />
+  <RouterLink ref={ref} to="/material-ui/getting-started/installation/" {...props} />
 ));
 
 function Router(props) {
   const { children } = props;
   if (typeof window === 'undefined') {
-    return <StaticRouter location="K_2.js">{children}</StaticRouter>;
+    return <StaticRouter location="/">{children}</StaticRouter>;
   }
 
   return <MemoryRouter>{children}</MemoryRouter>;
@@ -21,16 +23,16 @@ Router.propTypes = {
   children: PropTypes.node,
 };
 
-export default function ButtonRouter() {
+export default function LinkRouter() {
   return (
-    <div>
+    <Box sx={{ typography: 'body1' }}>
       <Router>
-        <Button component={RouterLink} to="K_2.js">
+        <Link component={RouterLink} to="/">
           With prop forwarding
-        </Button>
+        </Link>
         <br />
-        <Button component={LinkBehavior}>With inlining</Button>
+        <Link component={LinkBehavior}>Without prop forwarding</Link>
       </Router>
-    </div>
+    </Box>
   );
 }
