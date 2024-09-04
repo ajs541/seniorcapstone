@@ -3,6 +3,7 @@ import React, { Fragment, useState } from "react";
 import BackgroundElement from './components/Background';
 import { Button } from "@mui/material";
 import { BrowserRouter as Router, Route, Link, Routes, Outlet } from "react-router-dom";
+import { Box } from '@mui/material'
 let habitatsData;
 
 fetch('http://127.0.0.1:5000/habitats')
@@ -30,9 +31,11 @@ const Home = () => (
     subtitle="Click the habitats button to start."
     link="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Indore_zoo_gate.jpg/1280px-Indore_zoo_gate.jpg"
   >
-    <Button>
-      <Link to="/Habitats">Habitats</Link>
-    </Button>
+    <Box>
+      <Button component={Link} to="/Habitats" variant="contained">
+        Habitats
+      </Button>
+    </Box>
   </BackgroundElement>
 )
 
