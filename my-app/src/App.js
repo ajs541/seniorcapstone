@@ -1,9 +1,6 @@
 import './App.css';
 import React, { Fragment, useState } from "react";
-import BackgroundElement from './components/Background';
-import { Button } from "@mui/material";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import { Box } from '@mui/material'
+import { Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
 import Habitats from './pages/Habitats';
 

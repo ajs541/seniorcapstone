@@ -2,7 +2,7 @@ import React from "react";
 import BackgroundElement from "../components/Background";
 import { Button } from "@mui/material";
 import { Box } from '@mui/material'
-import { BrowserRouter as Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Habitats = () => (
     <BackgroundElement
