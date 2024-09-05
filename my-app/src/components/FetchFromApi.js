@@ -8,7 +8,7 @@ function apiFetch(itemType, subsection) {
     if (itemType === "habitatList") {
         let habitatsData;
         fetch('http://127.0.0.1:5000/habitats')
-            .then(response => response.json())
+            // .then(response => response.json())
             .then(data => {
                 habitatsData = data;
                 console.log(data);
