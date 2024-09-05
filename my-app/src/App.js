@@ -28,13 +28,20 @@ const NotFound = () => (
 const Home = () => (
   <BackgroundElement
     title="Welcome to WebSafari!"
-    subtitle="Click the habitats button to start."
+    subtitle="Click your grade level to start."
     link="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Indore_zoo_gate.jpg/1280px-Indore_zoo_gate.jpg"
   >
-    <Box>
-      <Button component={Link} to="/Habitats" variant="contained">
-        Habitats
-      </Button>
+    <Box sx={{display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', justifyContent: "space-around", alignItems: 'center', }}>
+      <Box>
+        <Button component={Link} to="/Habitats" variant="contained">
+          K-2
+        </Button>
+      </Box>
+      <Box>
+        <Button component={Link} to="/Habitats" variant="contained">
+          3-6
+        </Button>
+      </Box>
     </Box>
   </BackgroundElement>
 )
@@ -42,7 +49,7 @@ const Home = () => (
 const Habitats = () => (
   <BackgroundElement
     title="Choose a habitat."
-    link="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Indore_zoo_gate.jpg/1280px-Indore_zoo_gate.jpg"
+    link="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/View_over_the_garden_square_Artisplein_with_bird_cage%3B_free_photo_Amsterdam%2C_Fons_Heijnsbroek%2C_10-2022.jpg/1280px-View_over_the_garden_square_Artisplein_with_bird_cage%3B_free_photo_Amsterdam%2C_Fons_Heijnsbroek%2C_10-2022.jpg"
   >
     <p>Testing page</p>
   </BackgroundElement>
