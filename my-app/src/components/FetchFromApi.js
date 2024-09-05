@@ -56,7 +56,7 @@ function apiFetch(itemType, subsection) {
     }
     if (itemType === "animal") {
         let animalData;
-        fetch('http://127.0.0.1:5000/habitats')
+        fetch('http://127.0.0.1:5000/animals/' + subsection)
             .then(response => response.json())
             .then(data => {
                 animalData = data;
