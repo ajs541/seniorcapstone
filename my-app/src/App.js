@@ -2,17 +2,8 @@ import './App.css';
 import React, { Fragment, useState } from "react";
 import BackgroundElement from './components/Background';
 import { Button } from "@mui/material";
-import { BrowserRouter as Router, Route, Link, Routes, Outlet } from "react-router-dom";
+import { BrowserRouter as Route, Link, Routes } from "react-router-dom";
 import { Box } from '@mui/material'
-let habitatsData;
-
-fetch('http://127.0.0.1:5000/habitats')
-  .then(response => response.json())
-  .then(data => {
-    habitatsData = data;
-    console.log(data);
-  })
-  .catch(error => console.error('Error:', error));
 
 const Main = () => (
   <Fragment>
