@@ -1,7 +1,7 @@
 
 
 function apiFetch(itemType, subsection) {
-    if (itemType != "animal" && itemType != "habitat" && itemType != "habitatList") {
+    if (itemType !== "animal" && itemType !== "habitat" && itemType !== "habitatList") {
         throw new Error("Not valid item type")
     };
 
