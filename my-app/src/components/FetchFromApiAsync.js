@@ -42,7 +42,11 @@ async function apiFetchAsync(itemType, subsection) {
             console.log(animalsData);
 
             const aList = animalsData.map(entry => entry.name);
-            return [subsection, habitatDesc, aList];
+            return {
+                habitat: subsection,
+                description: habitatDesc,
+                animals: aList
+            };
         } catch (error) {
             console.error('Error:', error);
             return [];
