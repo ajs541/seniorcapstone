@@ -4,6 +4,8 @@ import { Button } from "@mui/material";
 import { Box } from '@mui/material'
 import { Link } from "react-router-dom";
 
+// Very Basic homepage, displays blurred background, with two buttons.
+
 const Home = () => (
   <BackgroundElement
     title="Welcome to WebSafari!"
