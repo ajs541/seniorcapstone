@@ -56,7 +56,7 @@ def get_animal_list():
 def get_animal(name):
     cur = get_db().cursor()
     res = cur.execute("SELECT * FROM animals WHERE name = ?;", (name,))
-    return res.fetchall()
+    return res.fetchone()
 
 if __name__ == "__main__":
     app.run()

@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import { Box } from '@mui/material';
 import { Link } from "react-router-dom";
 
+
 const Habitat = ({ name }) => {
     // Initialize habitat state as an empty object
     const [habitat, setHabitat] = useState(null);
@@ -31,7 +32,7 @@ const Habitat = ({ name }) => {
         >
             {habitat.animals && habitat.animals.length > 0 ? (
                 habitat.animals.map((animal, index) => (
-                    <Box key={index}>
+                    <Box key={index} sx={{width: '100%', justifyContent: "space-around", alignItems: 'center',}}>
                         {/* Updated link path to match the static habitat name */}
                         <Button component={Link} to={`/Habitats/${name}/${animal}`} variant="contained">
                             {animal}

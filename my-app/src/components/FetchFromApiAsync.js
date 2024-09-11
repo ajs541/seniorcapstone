@@ -12,6 +12,7 @@ async function apiFetchAsync(itemType, subsection) {
             console.log(habitatsData);
 
             const finalList = habitatsData.map(entry => entry.name);
+            /* const imageList = habitatsData.map(entry => entry); */
             return finalList;
         } catch (error) {
             console.error('Error:', error);
@@ -61,7 +62,7 @@ async function apiFetchAsync(itemType, subsection) {
             const response = await fetch(`http://127.0.0.1:5000/animals/${subsection}`);
             const animalData = await response.json();
             console.log(animalData);
-            return animalData[0]; 
+            return animalData; 
             // I DON'T KNOW WHY BUT THE API RETURNS A LIST FOR A SINGLE OBJECT, FIX THIS LATER WHEN API RETURNS OBJECT FOR SINGLE ANIMAL!!!!
         } catch (error) {
             console.error('Error:', error);

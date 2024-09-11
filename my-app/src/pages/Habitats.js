@@ -41,3 +41,6 @@ const Habitats = () => {
 };
 
 export default Habitats;
+{/* 
+  
+  */}

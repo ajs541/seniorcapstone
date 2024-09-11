@@ -50,6 +50,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/*" element={<Main />} />
         <Route path="/Habitats" element={<Habitats />} />
+        {/* /Habitats/:habitat */}
+        {/* const params = useParams(); params.habitat */}
 
         {/* Dynamically generated habitat and animal routes */}
         {habitatsData.map((habitat) => (
