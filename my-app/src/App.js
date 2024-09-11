@@ -7,6 +7,7 @@ import Habitat from './pages/Habitat';
 import Animal from './pages/Animal';
 import apiFetchAsync from './components/FetchFromApiAsync';
 
+
 const Main = () => (
   <Fragment>
     <h1>Error 404</h1>
@@ -24,8 +25,8 @@ function App() {
         const habitatList = await apiFetchAsync("habitatList", null);
 
         // For each habitat, fetch its details including animals
-        const habitatDetailsPromises = habitatList.map(async (habitatName) => {
-          const habitatDetails = await apiFetchAsync("habitat", habitatName);
+        const habitatDetailsPromises = habitatList.map(async (habitat) => {
+          const habitatDetails = await apiFetchAsync("habitat", habitat.name);
           return habitatDetails;
         });
 

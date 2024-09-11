@@ -10,10 +10,7 @@ async function apiFetchAsync(itemType, subsection) {
             const response = await fetch('http://127.0.0.1:5000/habitats');
             const habitatsData = await response.json();
             console.log(habitatsData);
-
-            const finalList = habitatsData.map(entry => entry.name);
-            /* const imageList = habitatsData.map(entry => entry); */
-            return finalList;
+            return habitatsData;
         } catch (error) {
             console.error('Error:', error);
             return [];

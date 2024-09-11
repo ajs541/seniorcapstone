@@ -4,6 +4,11 @@ import { Button } from "@mui/material";
 import { Box } from '@mui/material';
 import { Link } from "react-router-dom";
 import apiFetchAsync from "../components/FetchFromApiAsync";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import CardActionArea from '@mui/material/CardActionArea';
 
 const Habitats = () => {
   const [hList, setHList] = useState([]);
@@ -26,11 +31,25 @@ const Habitats = () => {
       <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', justifyContent: "space-around", alignItems: 'center', }}>
         {hList.length > 0 ? (
           hList.map((habitat, index) => (
-            <Box key={index}>
-              <Button component={Link} to={`/Habitats/${habitat}`} variant="contained">
-                {habitat}
-              </Button>
-            </Box>
+            <Card key={index} sx={{ backgroundColor: '#00000046', }}>
+              <CardActionArea component={Link} to={`/Habitats/${habitat.name}`}>
+                <CardMedia
+                  component="img"
+                  image={habitat.picture}
+                  sx={{
+                    height: '200px', // Adjust this to control card height
+                    objectFit: 'cover', // Ensures image maintains aspect ratio
+                  }}
+                />
+                <CardContent sx={{
+                  color: 'white',
+                }}>
+                  <Typography variant="h2" component="div">
+                    {habitat.name}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
           ))
         ) : (
           <p>Loading habitats...</p>
@@ -42,5 +61,9 @@ const Habitats = () => {
 
 export default Habitats;
 {/* 
-  
+  <Box key={index}>
+              <Button component={Link} to={`/Habitats/${habitat.name}`} variant="contained">
+                {habitat.name}
+              </Button>
+            </Box>
   */}
