@@ -65,7 +65,7 @@ function App() {
               <Route
                 key={animal}
                 path={`/Habitats/${habitat.habitat}/${animal}`}
-                element={<Animal name={animal} habitat={habitat.habitat} />}
+                element={<Animal name={animal} /*habitat={habitat.habitat} */ />}
               />
             ))}
           </Fragment>
