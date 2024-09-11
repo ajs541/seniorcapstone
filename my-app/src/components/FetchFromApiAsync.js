@@ -26,9 +26,11 @@ async function apiFetchAsync(itemType, subsection) {
             console.log(habitatsData);
 
             let habitatDesc = "";
+            let habitatLink = "";
             for (let entry of habitatsData) {
                 if (entry.name === subsection) {
                     habitatDesc = entry.description;
+                    habitatLink = entry.picture;
                     break;
                 }
             }
@@ -45,7 +47,8 @@ async function apiFetchAsync(itemType, subsection) {
             return {
                 habitat: subsection,
                 description: habitatDesc,
-                animals: aList
+                animals: aList,
+                picture: habitatLink
             };
         } catch (error) {
             console.error('Error:', error);

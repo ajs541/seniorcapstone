@@ -27,7 +27,7 @@ const Habitat = ({ name }) => {
         <BackgroundElement
             title={name}
             subtitle={habitat.description}
-            link="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Indore_zoo_gate.jpg/1280px-Indore_zoo_gate.jpg"
+            link={habitat.picture}
         >
             {habitat.animals && habitat.animals.length > 0 ? (
                 habitat.animals.map((animal, index) => (
