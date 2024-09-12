@@ -45,7 +45,7 @@ async function apiFetchAsync(itemType, subsection) {
             return {
                 habitat: subsection,
                 description: habitatDesc,
-                animals: aList,
+                animals: animalsData,
                 picture: habitatLink
             };
         } catch (error) {

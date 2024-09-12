@@ -4,6 +4,11 @@ import apiFetchAsync from "../components/FetchFromApiAsync";
 import { Button } from "@mui/material";
 import { Box } from '@mui/material';
 import { Link } from "react-router-dom";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import CardActionArea from '@mui/material/CardActionArea';
 
 
 const Habitat = ({ name }) => {
@@ -30,10 +35,42 @@ const Habitat = ({ name }) => {
             subtitle={habitat.description}
             link={habitat.picture}
         >
-            {habitat.animals && habitat.animals.length > 0 ? (
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', justifyContent: "space-around", alignItems: 'center', }}>
+                {habitat.animals && habitat.animals.length > 0 ? (
+                    habitat.animals.map((animal, index) => (
+                        <Card key={index} sx={{ backgroundColor: '#00000046', mb: '20px' }}>
+                            <CardActionArea component={Link} to={`/Habitats/${name}/${animal.name}`}>
+                                <CardMedia
+                                    component="img"
+                                    image={animal.main_pic}
+                                    sx={{
+                                        height: '150px', // Adjust this to control card height
+                                        objectFit: 'cover', // Ensures image maintains aspect ratio
+                                    }}
+                                />
+                                <CardContent sx={{
+                                    color: 'white',
+                                }}>
+                                    <Typography variant="h2" component="div">
+                                        {animal.name}
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                    ))
+                ) : (
+                    <p>Loading habitats...</p>
+                )}
+            </Box>
+        </BackgroundElement>
+    );
+}
+
+export default Habitat;
+{/*
+{habitat.animals && habitat.animals.length > 0 ? (
                 habitat.animals.map((animal, index) => (
                     <Box key={index} sx={{width: '100%', justifyContent: "space-around", alignItems: 'center',}}>
-                        {/* Updated link path to match the static habitat name */}
                         <Button component={Link} to={`/Habitats/${name}/${animal}`} variant="contained">
                             {animal}
                         </Button>
@@ -42,8 +79,4 @@ const Habitat = ({ name }) => {
             ) : (
                 <p>No animals found in this habitat</p>
             )}
-        </BackgroundElement>
-    );
-}
-
-export default Habitat;
+*/}

@@ -31,13 +31,13 @@ const Habitats = () => {
       <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', justifyContent: "space-around", alignItems: 'center', }}>
         {hList.length > 0 ? (
           hList.map((habitat, index) => (
-            <Card key={index} sx={{ backgroundColor: '#00000046', }}>
+            <Card key={index} sx={{ backgroundColor: '#00000046', mb: '20px'}}>
               <CardActionArea component={Link} to={`/Habitats/${habitat.name}`}>
                 <CardMedia
                   component="img"
                   image={habitat.picture}
                   sx={{
-                    height: '200px', // Adjust this to control card height
+                    height: '150px', // Adjust this to control card height
                     objectFit: 'cover', // Ensures image maintains aspect ratio
                   }}
                 />

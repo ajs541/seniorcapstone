@@ -66,9 +66,9 @@ function App() {
             {/* Route for each animal within the habitat */}
             {habitat.animals.map((animal) => (
               <Route
-                key={animal}
-                path={`/Habitats/${habitat.habitat}/${animal}`}
-                element={<Animal name={animal} /*habitat={habitat.habitat} */ />}
+                key={animal.name}
+                path={`/Habitats/${habitat.habitat}/${animal.name}`}
+                element={<Animal name={animal.name} /*habitat={habitat.habitat} */ />}
               />
             ))}
           </Fragment>

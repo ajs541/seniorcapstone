@@ -14,17 +14,16 @@ import CardActionArea from '@mui/material/CardActionArea';
 const Home = () => (
   <BackgroundElement
     title="Welcome to WebSafari!"
-    subtitle="Click your grade level to start."
+    subtitle="Click the Enter button to start."
     link="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Indore_zoo_gate.jpg/1280px-Indore_zoo_gate.jpg"
   >
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', justifyContent: "space-around", alignItems: 'center', }}>
-      <Card sx={{backgroundColor: 'transparent',}}>
+      <Card sx={{backgroundColor: '#00000046',}}>
         <CardActionArea component={Link} to="/Habitats">
           <CardMedia
             component="img"
-            image="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Kindergarten_is_fun_%282908834379%29.jpg/1024px-Kindergarten_is_fun_%282908834379%29.jpg"
-            sx={{
-              filter: 'blur(1px)',   
+            image="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Gate_-_Wilhelma_Zoo_-_Stuttgart%2C_Germany_-_DSC01683.jpg/1280px-Gate_-_Wilhelma_Zoo_-_Stuttgart%2C_Germany_-_DSC01683.jpg"
+            sx={{  
               height: '200px', // Adjust this to control card height
               objectFit: 'cover', // Ensures image maintains aspect ratio
               }}
@@ -33,7 +32,7 @@ const Home = () => (
             color: 'white',
             }}>
             <Typography variant="h2" component="div">
-              K-2
+              Enter
             </Typography>
           </CardContent>
         </CardActionArea>
