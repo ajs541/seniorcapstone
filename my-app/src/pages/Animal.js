@@ -25,7 +25,7 @@ const Animal = ({ name }) => {
     return (
         <BackgroundElement
             title={name}
-            link="https://i.imgur.com/NRZOtzd.png" // PLEASE CHANGE THIS LATER
+            link={animal.main_pic} // PLEASE CHANGE THIS LATER
         >
             <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', justifyContent: "space-around", alignItems: 'center', }}>
                 <Box>

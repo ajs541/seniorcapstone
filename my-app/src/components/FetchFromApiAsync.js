@@ -41,7 +41,6 @@ async function apiFetchAsync(itemType, subsection) {
             const animalsData = await animalResponse.json();
             console.log(animalsData);
 
-            const aList = animalsData.map(entry => entry.name);
             return {
                 habitat: subsection,
                 description: habitatDesc,
