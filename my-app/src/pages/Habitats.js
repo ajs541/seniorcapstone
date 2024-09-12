@@ -59,10 +59,3 @@ const Habitats = () => {
 };
 
 export default Habitats;
-{/* 
-  <Box key={index}>
-              <Button component={Link} to={`/Habitats/${habitat.name}`} variant="contained">
-                {habitat.name}
-              </Button>
-            </Box>
-  */}

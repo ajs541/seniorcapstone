@@ -66,16 +66,3 @@ const Habitat = ({ name }) => {
 }
 
 export default Habitat;
-{/*
-{habitat.animals && habitat.animals.length > 0 ? (
-                habitat.animals.map((animal, index) => (
-                    <Box key={index} sx={{width: '100%', justifyContent: "space-around", alignItems: 'center',}}>
-                        <Button component={Link} to={`/Habitats/${name}/${animal}`} variant="contained">
-                            {animal}
-                        </Button>
-                    </Box>
-                ))
-            ) : (
-                <p>No animals found in this habitat</p>
-            )}
-*/}

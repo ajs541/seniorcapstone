@@ -97,25 +97,3 @@ const Animal = ({ name }) => {
 }
 
 export default Animal;
-{/*
-<Card sx={{ backgroundColor: '#00000046', mb: '20px' }}>
-    <CardMedia
-        component="img"
-        image={animal.main_pic}
-        sx={{
-            height: '150px', // Adjust this to control card height
-            objectFit: 'cover', // Ensures image maintains aspect ratio
-        }}
-    />
-    <CardContent sx={{
-        color: 'white',
-    }}>
-        <Typography variant="h5" component="div">
-            Lifespan:
-        </Typography>
-        <Typography variant="body1" component="div">
-            {animal.Lifespan}
-        </Typography>
-    </CardContent>
-</Card>
-*/}
