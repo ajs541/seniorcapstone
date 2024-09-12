@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import HomeButton from './HomeButton';
 
 function BackgroundElement({ title, subtitle, link, children }) {
   return (
@@ -27,7 +28,17 @@ function BackgroundElement({ title, subtitle, link, children }) {
           zIndex: 1, // Behind the content
         }}
       />
-
+      {/* Home Button */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '10px',
+          left: '10px',
+          zIndex: 3, // In front of the background and title
+        }}
+      >
+        <HomeButton /> {/* Home button component */}
+      </Box>
       {/* Title Card */}
       <Box
         sx={{

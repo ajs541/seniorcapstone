@@ -7,7 +7,6 @@ import Habitat from './pages/Habitat';
 import Animal from './pages/Animal';
 import apiFetchAsync from './components/FetchFromApiAsync';
 
-
 const Main = () => (
   <Fragment>
     <h1>Error 404</h1>
