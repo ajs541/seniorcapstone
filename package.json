@@ -3,6 +3,7 @@
      "concurrently": "^8.2.2"
   },
   "scripts": {
-    "start": "concurrently --names 'API,CLIENT' 'cd Python && poetry run flask run' 'cd my-app && npm start'"
+    "start": "concurrently --names 'API,CLIENT' 'cd Python && poetry run flask run' 'cd my-app && npm start'",
+    "postinstall": "concurrently --names 'API,CLIENT' 'cd Python && poetry install && poetry run python create_db.py force' 'cd my-app && npm i'"
    }
   }
