@@ -3,7 +3,6 @@ import BackgroundElement from "../components/Background";
 import apiFetchAsync from "../components/FetchFromApiAsync";
 import { Typography } from "@mui/material";
 import { Box } from '@mui/material';
-import { Link } from "react-router-dom";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
