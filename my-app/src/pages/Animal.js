@@ -34,7 +34,7 @@ const Animal = ({ name }) => {
                 <Card sx={{ backgroundColor: '#00000046', mb: '20px' }}>
                     <CardMedia
                         component="img"
-                        image={animal.main_pic}
+                        image={animal.pic1}
                         sx={{
                             height: '150px', // Adjust this to control card height
                             objectFit: 'cover', // Ensures image maintains aspect ratio
@@ -54,7 +54,7 @@ const Animal = ({ name }) => {
                 <Card sx={{ backgroundColor: '#00000046', mb: '20px', maxWidth: '300px' }}>
                     <CardMedia
                         component="img"
-                        image={animal.main_pic}
+                        image={animal.pic2}
                         sx={{
                             height: '150px', // Adjust this to control card height
                             objectFit: 'cover', // Ensures image maintains aspect ratio
@@ -74,7 +74,7 @@ const Animal = ({ name }) => {
                 <Card sx={{ backgroundColor: '#00000046', mb: '20px' }}>
                     <CardMedia
                         component="img"
-                        image={animal.main_pic}
+                        image={animal.pic3}
                         sx={{
                             height: '150px', // Adjust this to control card height
                             objectFit: 'cover', // Ensures image maintains aspect ratio
