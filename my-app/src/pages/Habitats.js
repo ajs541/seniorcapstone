@@ -43,7 +43,7 @@ const Habitats = () => {
                 <CardContent sx={{
                   color: 'white',
                 }}>
-                  <Typography variant="h2" component="div">
+                  <Typography variant="h3" component="div">
                     {habitat.name}
                   </Typography>
                 </CardContent>

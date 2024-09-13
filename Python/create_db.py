@@ -2,6 +2,7 @@ import sqlite3
 import sys
 import os
 
+
 if sys.argv[1] != 'force':
     ans = input('Are you sure? This will overwrite zoo.db! [y/N] ')
 
