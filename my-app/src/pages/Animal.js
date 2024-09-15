@@ -42,7 +42,7 @@ const Animal = ({ name }) => {
                     <CardContent sx={{
                         color: 'white',
                     }}>
-                        <Typography variant="h5" component="div">
+                        <Typography variant="h3" component="div">
                             Height:
                         </Typography>
                         <Typography variant="body1" component="div">
@@ -62,7 +62,7 @@ const Animal = ({ name }) => {
                     <CardContent sx={{
                         color: 'white',
                     }}>
-                        <Typography variant="h5" component="div">
+                        <Typography variant="h3" component="div">
                             About:
                         </Typography>
                         <Typography variant="body1" component="div">
@@ -82,7 +82,7 @@ const Animal = ({ name }) => {
                     <CardContent sx={{
                         color: 'white',
                     }}>
-                        <Typography variant="h5" component="div">
+                        <Typography variant="h3" component="div">
                             Lifespan:
                         </Typography>
                         <Typography variant="body1" component="div">

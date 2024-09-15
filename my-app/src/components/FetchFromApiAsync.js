@@ -1,7 +1,7 @@
 
 
 async function apiFetchAsync(itemType, subsection) {
-    if (itemType !== "animal" && itemType !== "habitat" && itemType !== "habitatList") {
+    if (itemType !== "animal" && itemType !== "habitat" && itemType !== "habitatList" && itemType !== "questions") {
         throw new Error("Not valid item type");
     }
 
@@ -9,7 +9,6 @@ async function apiFetchAsync(itemType, subsection) {
         try {
             const response = await fetch('http://127.0.0.1:5000/habitats');
             const habitatsData = await response.json();
-            console.log(habitatsData);
             return habitatsData;
         } catch (error) {
             console.error('Error:', error);
@@ -21,7 +20,6 @@ async function apiFetchAsync(itemType, subsection) {
         try {
             const habitatResponse = await fetch('http://127.0.0.1:5000/habitats');
             const habitatsData = await habitatResponse.json();
-            console.log(habitatsData);
 
             let habitatDesc = "";
             let habitatLink = "";
@@ -39,7 +37,6 @@ async function apiFetchAsync(itemType, subsection) {
 
             const animalResponse = await fetch(`http://127.0.0.1:5000/habitats/${subsection}`);
             const animalsData = await animalResponse.json();
-            console.log(animalsData);
 
             return {
                 habitat: subsection,
@@ -57,12 +54,22 @@ async function apiFetchAsync(itemType, subsection) {
         try {
             const response = await fetch(`http://127.0.0.1:5000/animals/${subsection}`);
             const animalData = await response.json();
-            console.log(animalData);
             return animalData; 
-            // I DON'T KNOW WHY BUT THE API RETURNS A LIST FOR A SINGLE OBJECT, FIX THIS LATER WHEN API RETURNS OBJECT FOR SINGLE ANIMAL!!!!
         } catch (error) {
             console.error('Error:', error);
             return null;
+        }
+    }
+
+    if (itemType === "questions") {
+        try {
+            const response = await fetch('http://127.0.0.1:5000/questions');
+            const questionsData = await response.json();
+            console.log(questionsData);
+            return questionsData;
+        } catch (error) {
+            console.error('Error', error);
+            return [];
         }
     }
 }

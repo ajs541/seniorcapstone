@@ -20,7 +20,7 @@ const Habitats = () => {
 
     fetchHabitats();  // Fetch data when component mounts
   }, []);
-
+  // PUT A GRID IN HERE!!!!!
   return (
     <BackgroundElement
       title="Choose a habitat."
@@ -29,27 +29,30 @@ const Habitats = () => {
       {/* Map over the hList array to display the list of habitats */}
       <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', justifyContent: "space-around", alignItems: 'center', }}>
         {hList.length > 0 ? (
-          hList.map((habitat, index) => (
-            <Card key={index} sx={{ backgroundColor: '#00000046', mb: '20px'}}>
-              <CardActionArea component={Link} to={`/Habitats/${habitat.name}`}>
-                <CardMedia
-                  component="img"
-                  image={habitat.picture}
-                  sx={{
-                    height: '150px', // Adjust this to control card height
-                    objectFit: 'cover', // Ensures image maintains aspect ratio
-                  }}
-                />
-                <CardContent sx={{
-                  color: 'white',
-                }}>
-                  <Typography variant="h3" component="div">
-                    {habitat.name}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          ))
+          hList.map((habitat, index) => {
+
+            return (
+              <Card key={index} sx={{ backgroundColor: '#00000046', mb: '20px' }}>
+                <CardActionArea component={Link} to={`/Habitats/${habitat.name}`}>
+                  <CardMedia
+                    component="img"
+                    image={habitat.picture}
+                    sx={{
+                      height: '150px', // Adjust this to control card height
+                      objectFit: 'cover', // Ensures image maintains aspect ratio
+                    }}
+                  />
+                  <CardContent sx={{
+                    color: 'white',
+                  }}>
+                    <Typography variant="h3" component="div">
+                      {habitat.name}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            )
+          })
         ) : (
           <p>Loading habitats...</p>
         )}

@@ -58,13 +58,13 @@ def get_animal(name):
     res = cur.execute("SELECT * FROM animals WHERE name = ?;", (name,))
     return res.fetchone()
 
-@app.route("/quiz")
+@app.route("/questions")
 def get_all_questions():
     cur = get_db().cursor()
     res = cur.execute("SELECT * FROM questions;")
     return res.fetchall()
 
-@app.route("/quiz/<id>")
+@app.route("/questions/<id>")
 def get_question(id):
     cur = get_db().cursor()
     res = cur.execute("SELECT * FROM questions WHERE id = ?;", (id,))

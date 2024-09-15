@@ -6,6 +6,7 @@ import Habitats from './pages/Habitats';
 import Habitat from './pages/Habitat';
 import Animal from './pages/Animal';
 import apiFetchAsync from './components/FetchFromApiAsync';
+import Quiz from './pages/Quiz';
 
 const Main = () => (
   <Fragment>
@@ -50,6 +51,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/*" element={<Main />} />
         <Route path="/Habitats" element={<Habitats />} />
+        <Route path="/Quiz" element={<Quiz />} />
         {/* /Habitats/:habitat */}
         {/* const params = useParams(); params.habitat */}
 
