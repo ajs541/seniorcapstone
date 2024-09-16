@@ -44,10 +44,10 @@ const Quiz = () => {
     const questionDisplay = questions.map((question, index) => {
 
         return (
-            <Card key={index} sx={{ backgroundColor: '#00000046', marginBottom: 3 }}>
+            <Card key={index} sx={{ backgroundColor: '#00000075', marginBottom: 3 }}>
                 <CardContent sx={{ color: "white" }}>
                     <FormControl error={error} component="fieldset" variant="standard">
-                        <FormLabel component="legend">{question.question}</FormLabel>
+                        <FormLabel component="legend" sx={{color: "white"}}>{question.question}</FormLabel>
                         <RadioGroup
                             aria-label={`quiz-${index}`}
                             name={`quiz-${index}`}
@@ -65,7 +65,7 @@ const Quiz = () => {
                                 />
                             ))}
                         </RadioGroup>
-                        <FormHelperText>{helperText}</FormHelperText>
+                        <FormHelperText sx={{color: "white"}}>{helperText}</FormHelperText>
                     </FormControl>
                 </CardContent>
             </Card>
