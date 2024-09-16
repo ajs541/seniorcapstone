@@ -37,11 +37,25 @@ const Home = () => (
           </CardContent>
         </CardActionArea>
       </Card>
-      <Button component={Link} to="/Quiz">
-          <Typography>
-            Quiz
-          </Typography>
-      </Button>
+      <Card sx={{ backgroundColor: '#00000046', }}>
+        <CardActionArea component={Link} to="/Quiz">
+          <CardMedia
+            component="img"
+            image="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Wasedashiki_Quiz_buzzer.jpg/1024px-Wasedashiki_Quiz_buzzer.jpg"
+            sx={{
+              height: '200px', // Adjust this to control card height
+              objectFit: 'cover', // Ensures image maintains aspect ratio
+            }}
+          />
+          <CardContent sx={{
+            color: 'white',
+          }}>
+            <Typography variant="h2" component="div">
+              Quiz
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
     </Box>
   </BackgroundElement>
 )
